@@ -1,0 +1,14 @@
+@use "../../../scss//" as *;
+
+.leader-section {
+  background-color: #fafafa;
+  position: relative;
+  padding: 7.5rem 0;
+  @include breakpoint-down(md) {
+    padding: 4rem 0;
+  }
+
+  > .container > div {
+    margin-bottom: 4rem;
+  }
+}

@@ -1,0 +1,43 @@
+@use "../../../scss//" as *;
+
+.thing-section {
+  position: relative;
+  padding: 7.5rem 0;
+  @include breakpoint-down(md) {
+    padding: 4rem 0;
+  }
+
+  &__col {
+    margin-top: 1.8rem;
+    text-align: center;
+    div {
+      padding: 1.8rem 1.8rem !important;
+      @include breakpoint-down(md) {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+      }
+
+      span {
+        color: $txt-color;
+        font-weight: 600;
+        font-size: 2.36859rem;
+      }
+
+      h5 {
+        letter-spacing: -0.05rem;
+        color: $txt-color;
+        font-weight: 700;
+        font-size: 1.33rem;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        text-align: center;
+        font-family: $secondary-font;
+        font-size: 1rem;
+        color: #6a6a6a;
+      }
+    }
+  }
+}

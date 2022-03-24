@@ -1,0 +1,80 @@
+@use "../../../scss//" as *;
+
+.reason-section {
+  position: relative;
+  padding: 7.5rem 0;
+  @include breakpoint-down(md) {
+    padding: 4rem 0;
+  }
+
+  &__image {
+    img {
+      border-radius: 10px;
+    }
+  }
+
+  &__main {
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+    @include breakpoint-down(md) {
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+    }
+
+    div {
+      margin-top: 3rem;
+      @include breakpoint-down(md) {
+        padding-left: 1.8rem;
+        padding-right: 1.8rem;
+      }
+    }
+
+    div:first-child {
+      margin-top: 0;
+    }
+
+    h5 {
+      letter-spacing: -0.05rem;
+      color: $txt-color;
+      font-weight: 700;
+      font-size: 1.33rem;
+      margin-bottom: 0.5rem;
+
+      span {
+        margin-right: 1rem;
+        color: $txt-color;
+      }
+    }
+    p {
+      padding: 0 1rem;
+      @include breakpoint-down(md) {
+        padding: 0;
+      }
+      margin-top: 1rem;
+      text-align: left;
+      font-family: $secondary-font;
+      font-size: 1rem;
+      color: #6a6a6a;
+    }
+  }
+}
+
+.investment-contact {
+  padding: 4rem 0;
+  background-color: $primary-color;
+
+  h4 {
+    margin-bottom: 0;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.77689rem;
+    line-height: 1.2;
+    letter-spacing: -0.05rem;
+  }
+
+  &-button {
+    @include breakpoint-down(lg) {
+      margin-top: 10px;
+    }
+  }
+}

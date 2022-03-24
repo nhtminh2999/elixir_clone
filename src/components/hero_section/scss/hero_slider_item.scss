@@ -1,0 +1,36 @@
+@use "../../../scss/" as *;
+
+.hero__slider__item {
+  min-height: 100vh;
+
+  &__content {
+    padding: 120px 0;
+    min-height: 100vh;
+    @include breakpoint-down(md) {
+      padding-left: 48px;
+      padding-right: 48px;
+    }
+    h1 {
+      font-size: 4.20873rem;
+      letter-spacing: -0.25rem;
+      font-weight: 700;
+      @include breakpoint-down(md) {
+        font-size: 3.15733rem;
+        line-height: 1;
+      }
+    }
+
+    p {
+      margin-bottom: 3rem;
+      margin-top: 1.8rem;
+      font-family: $secondary-font;
+      color: $txt-color;
+      line-height: 1.15;
+      font-size: 1.77689rem;
+      @include breakpoint-down(md) {
+        font-size: 1.333rem;
+        line-height: 1.15;
+      }
+    }
+  }
+}

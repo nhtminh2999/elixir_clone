@@ -1,0 +1,59 @@
+@use "../../../scss//" as *;
+
+.contact-section {
+  position: relative;
+  padding: 7.5rem 0;
+  background-color: $primary-color;
+  @include breakpoint-down(md) {
+    padding: 4rem 0;
+  }
+
+  .col--left {
+    text-align: center;
+    div {
+      padding: 3rem 1.8rem !important;
+      @include breakpoint-down(md) {
+        padding: 1.8rem !important;
+      }
+      border-radius: 10px;
+      border-color: $secondary-color;
+      border-width: 2px;
+      border: 1px solid $secondary-color;
+
+      h4 {
+        margin-bottom: 1.333rem;
+        color: #fff;
+        font-weight: 700;
+        font-size: 1.77689rem;
+        line-height: 1.2;
+        letter-spacing: -0.05rem;
+      }
+
+      p {
+        padding: 0 0.25rem;
+        @include breakpoint-down(md) {
+          padding: 0;
+        }
+        font-family: $secondary-font;
+        font-size: 1rem;
+        color: #fff;
+      }
+    }
+  }
+
+  .col--right {
+    padding-left: 3rem !important;
+    @include breakpoint-down(md) {
+      padding-left: 15px !important;
+    }
+
+    h5 {
+      margin-bottom: 0.5rem;
+      color: #fff;
+      font-weight: 700;
+      letter-spacing: -0.05rem;
+      font-size: 1.333rem;
+      line-height: 1.2;
+    }
+  }
+}

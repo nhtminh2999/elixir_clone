@@ -1,0 +1,104 @@
+@use "../../../scss/" as *;
+
+.intro-section {
+  background-color: $bg-primary-color;
+  padding: 120px 0;
+  @include breakpoint-down(md) {
+    padding: 4rem 0;
+  }
+
+  &__feature {
+    margin-top: 3rem;
+    @include breakpoint-down(md) {
+      margin-top: 1.8rem;
+    }
+
+    &__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      height: 100px;
+      width: 100px;
+      background-color: #fafafa;
+      border-radius: 100%;
+      border: 1px solid #e1e1e1;
+
+      i {
+        font-weight: 600;
+        font-size: 2.36859rem;
+      }
+    }
+
+    &__title {
+      margin-top: 1.8rem;
+      color: $txt-color;
+      font-weight: 700;
+      font-size: 1.333rem;
+      letter-spacing: -0.05rem;
+    }
+
+    &__desc {
+      padding: 0 1rem;
+      margin-top: 1rem;
+      margin-bottom: 0;
+      font-size: 1rem;
+      font-family: $secondary-font;
+    }
+  }
+
+  &__video {
+    padding: 7.5rem 0;
+    padding-top: 0;
+    @include breakpoint-down(md) {
+      padding: 4rem 0;
+      padding-top: 0;
+    }
+    &__main {
+      position: relative;
+      padding: 15rem 0;
+      @include breakpoint-down(md) {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+      }
+    }
+  }
+
+  &__advantage {
+    padding: 7.5rem 0;
+    padding-top: 0;
+    @include breakpoint-down(md) {
+      padding: 4rem 0;
+      padding-top: 0;
+    }
+    &__item {
+      @include breakpoint-down(md) {
+        padding-left: 25px !important;
+        padding-right: 25px !important;
+      }
+      h5 {
+        letter-spacing: -0.05rem;
+        color: $txt-color;
+        font-weight: 700;
+        font-size: 1.33rem;
+        margin-bottom: 0.5rem;
+
+        span {
+          margin-right: 1rem;
+          color: $txt-color;
+        }
+      }
+      p {
+        padding-right: 3rem;
+        @include breakpoint-down(md) {
+          padding-right: 1rem;
+        }
+        margin-top: 1rem;
+        text-align: left;
+        font-family: $secondary-font;
+        font-size: 1rem;
+        color: #6a6a6a;
+      }
+    }
+  }
+}

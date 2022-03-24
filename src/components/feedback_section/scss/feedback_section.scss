@@ -1,0 +1,9 @@
+@use "../../../scss//" as *;
+
+.feedback-section {
+  position: relative;
+  padding: 7.5rem 0;
+  @include breakpoint-down(md) {
+    padding: 4rem 0;
+  }
+}

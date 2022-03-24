@@ -1,0 +1,63 @@
+@use "../../../scss//" as *;
+
+.footer__top {
+  background-color: $footer-bg-primary-color;
+  position: relative;
+  padding: 7.5rem 0;
+  @include breakpoint-down(md) {
+    padding: 4rem 0;
+  }
+}
+
+.footer__col {
+  &--left {
+    margin-left: auto;
+    @include breakpoint-down(md) {
+      margin-left: unset;
+    }
+    ul {
+      li {
+        margin-bottom: 1rem;
+        a {
+          color: #fff;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  &--right {
+    margin-left: auto;
+    @include breakpoint-down(md) {
+      margin-left: unset;
+    }
+    ul {
+      li {
+        margin-bottom: 1rem;
+        a {
+          color: #fff;
+          font-weight: 600;
+        }
+      }
+    }
+
+    h5 {
+      display: inline-block;
+      letter-spacing: -0.05rem;
+      font-size: 1rem;
+      color: #fff;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+  }
+}
+
+.footer__bottom {
+  padding-top: 1.8rem;
+  padding-bottom: 1.8rem;
+
+  .logo {
+    @include breakpoint-down(md) {
+      text-align: center;
+    }
+  }
+}

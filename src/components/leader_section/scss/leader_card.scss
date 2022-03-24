@@ -1,0 +1,38 @@
+@use "../../../scss//" as *;
+
+.leader-card {
+  border-radius: 10px;
+  background-color: $bg-primary-color;
+  height: 100%;
+  text-align: center;
+  img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px !important;
+    margin-bottom: 1.8rem;
+  }
+
+  div {
+    padding: 0 1.8rem;
+    h5 {
+      letter-spacing: -0.05rem;
+      color: $txt-color;
+      font-weight: 700;
+      font-size: 1.33rem;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+    h6 {
+      color: #949494;
+      font-weight: 400;
+      font-size: 0.75019rem;
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+    p {
+      padding: 1rem 0;
+      font-family: $secondary-font;
+      font-size: 1rem;
+      color: #6a6a6a;
+    }
+  }
+}

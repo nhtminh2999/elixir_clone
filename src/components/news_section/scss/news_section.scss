@@ -1,0 +1,17 @@
+@use "../../../scss//" as *;
+
+.news-section {
+  background-color: #fafafa;
+  position: relative;
+  padding: 7.5rem 0;
+  @include breakpoint-down(md) {
+    padding: 4rem 0;
+  }
+
+  &__row {
+    margin-top: 4rem;
+    @include breakpoint-down(md) {
+      margin-top: 0;
+    }
+  }
+}

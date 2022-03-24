@@ -1,0 +1,22 @@
+@use "../../../scss//" as *;
+
+.contact-form {
+  margin-top: 1.8rem;
+
+  &__input {
+    padding: 0.8rem;
+    font-family: $primary-font;
+    font-size: 0.75019rem;
+    line-height: 1.5;
+    border-color: #e1e1e1;
+    box-shadow: none;
+    border-radius: 3px;
+    background-color: #fafafa;
+    height: auto;
+  }
+
+  &__action {
+    outline: none;
+    width: 100%;
+  }
+}

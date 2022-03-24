@@ -1,0 +1,53 @@
+@use "../../../scss//" as *;
+
+.sign-up-form {
+  background-color: $primary-color;
+  padding: 4rem;
+  color: #fff;
+  border-radius: 10px;
+  @include breakpoint-down(md) {
+    padding: 3rem;
+  }
+
+  h4 {
+    margin-bottom: 0.25rem;
+    font-size: 1.77689rem;
+    color: #fff;
+    @include breakpoint-down(md) {
+      font-size: 1.333rem;
+    }
+    letter-spacing: -0.05rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.45;
+  }
+
+  > form {
+    margin-top: 1.8rem;
+    @include breakpoint-down(md) {
+      margin-top: 1.5rem;
+    }
+  }
+
+  &__input {
+    padding: 0.8rem;
+    font-family: $primary-font;
+    font-size: 0.75019rem;
+    line-height: 1.5;
+    border-color: #e1e1e1;
+    box-shadow: none;
+    border-radius: 3px;
+    background-color: #fafafa;
+    height: auto;
+  }
+
+  &__action {
+    outline: none;
+    width: 100%;
+  }
+}

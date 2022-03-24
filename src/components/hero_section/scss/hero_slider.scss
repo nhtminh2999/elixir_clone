@@ -1,0 +1,43 @@
+.hero__slider {
+  overflow: hidden;
+  &__arrow {
+    opacity: 0.7;
+    position: absolute;
+    display: block;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 3;
+    transition: all 500ms ease;
+
+    i {
+      font-size: 30px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.8);
+      text-shadow: 1px 1px 0 rgb(255 255 255 / 30%);
+    }
+
+    &--prev {
+      left: -20%;
+    }
+    &--next {
+      right: -20%;
+      text-align: right;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &:hover {
+    .hero__slider__arrow--prev {
+      left: 10px;
+    }
+    .hero__slider__arrow--next {
+      right: 10px;
+    }
+  }
+}

@@ -1,0 +1,80 @@
+@use "../../../scss//" as *;
+
+.service-section {
+  position: relative;
+  background-color: #fafafa;
+  padding: 7.5rem 0;
+  @include breakpoint-down(md) {
+    padding: 4rem 0;
+  }
+
+  &__row {
+    position: relative;
+  }
+
+  &__col {
+    &--image {
+      position: relative;
+      min-height: 400px;
+      z-index: 1;
+    }
+    &--content {
+      background-color: $bg-primary-color;
+      padding: 4rem 3rem;
+
+      > div {
+        display: flex;
+        align-items: center;
+        height: 100%;
+      }
+
+      h5 {
+        color: $txt-color;
+        font-weight: 700;
+        font-size: 1.333rem;
+      }
+
+      p {
+        margin: 1rem 0;
+        font-size: 1rem;
+        color: #6a6a6a;
+        font-family: $secondary-font;
+      }
+    }
+  }
+
+  &__feature {
+    margin-top: 5rem;
+
+    &__col {
+      @include breakpoint-down(md) {
+        padding-left: 1.8rem !important;
+        padding-right: 1.8rem !important;
+      }
+
+      h5 {
+        letter-spacing: -0.05rem;
+        color: $txt-color;
+        font-weight: 700;
+        font-size: 1.33rem;
+        margin-bottom: 0.5rem;
+
+        span {
+          margin-right: 1rem;
+          color: $txt-color;
+        }
+      }
+      p {
+        padding-right: 3rem;
+        @include breakpoint-down(md) {
+          padding-right: 1rem;
+        }
+        margin-top: 1rem;
+        text-align: left;
+        font-family: $secondary-font;
+        font-size: 1rem;
+        color: #6a6a6a;
+      }
+    }
+  }
+}

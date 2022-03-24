@@ -1,0 +1,272 @@
+@use "../../../scss/" as *;
+
+.header__top {
+  padding: 16px 0;
+  background-color: $primary-color;
+  font-family: $secondary-font;
+  color: #fff;
+
+  @include breakpoint-down(md) {
+    display: none;
+  }
+  .icon {
+    display: inline-block;
+    color: $secondary-color;
+    font-weight: 800;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: -15px;
+    margin-left: -15px;
+    p {
+      display: inline;
+      margin-left: 8px;
+      font-size: 0.75019rem;
+      font-weight: 700;
+    }
+
+    &__left {
+      display: flex;
+
+      &__address,
+      &__phone {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+  }
+}
+
+.header__main {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: -56px;
+  background-color: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 1px 3px rgb(0 0 0 / 15%);
+  color: $txt-color;
+  z-index: 999;
+
+  @include breakpoint-down(md) {
+    .container {
+      max-height: 100vh;
+      overflow-y: auto;
+    }
+  }
+  nav {
+    position: relative;
+    display: flex;
+    @include breakpoint-down(md) {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    align-items: center;
+    padding: 8px 0;
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+.header__logo {
+  margin-right: 16px;
+  padding: 0 16px 0 0;
+}
+
+.header__mobile__icon {
+  display: none;
+  cursor: pointer;
+  width: 32px;
+  height: 20px;
+
+  @include breakpoint-down(md) {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  span {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #1e1e1e;
+    transition: all 0.4s;
+  }
+
+  span:first-child,
+  span:last-child {
+    display: block;
+    height: 2px;
+    width: 75%;
+    background-color: #1e1e1e;
+  }
+
+  &.active {
+    span {
+      display: none;
+      transition: all 0.4s;
+    }
+    span:first-child {
+      display: block;
+      transform: translateY(6px) translateX(1px) rotate(45deg);
+      width: 100%;
+    }
+    span:last-child {
+      display: block;
+      transform: translateY(-11px) translateX(1px) rotate(-45deg);
+      width: 100%;
+    }
+  }
+}
+
+.navbar-collapse {
+  display: flex;
+  flex-basis: auto;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: space-between;
+
+  @include breakpoint-down(md) {
+    flex-basis: 100%;
+    flex-wrap: wrap;
+  }
+  .navbar-nav {
+    display: flex;
+    @include breakpoint-down(md) {
+      padding: 19px 0 0 0;
+      width: 100%;
+      flex-direction: column;
+    }
+    font-weight: 700;
+
+    li {
+      position: relative;
+      padding: 0 15px;
+      @include breakpoint-down(md) {
+        padding: 0;
+      }
+      a {
+        display: block;
+        @include breakpoint-down(md) {
+          position: relative;
+          padding: 6.4px 19.2px;
+          flex-direction: column;
+        }
+        color: rgba(42, 56, 85, 0.8);
+        transition: color 0.2s ease-in-out;
+        &.active,
+        &:hover {
+          color: rgba(42, 56, 85, 1);
+        }
+      }
+    }
+
+    li.has-dropdown {
+      > a::after {
+        content: "\f107";
+        font-family: "Font Awesome 5 Free";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        pointer-events: none;
+        transform: translateY(-50%);
+      }
+
+      ul {
+        position: absolute;
+        width: max-content;
+        box-shadow: 0 2px 28px 0 rgb(0 0 0 / 6%);
+        overflow: hidden;
+        opacity: 0;
+        transform: translateY(2em);
+        visibility: hidden;
+        z-index: -1;
+        transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
+
+        li {
+          display: block;
+          background-color: #f7f7f7;
+
+          a {
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 40px;
+            @include breakpoint-down(md) {
+              line-height: 1.5;
+            }
+            color: $txt-color;
+            border-bottom: 1px solid #eee;
+            word-wrap: break-word; /* IE 5.5-7 */
+            white-space: pre-wrap;
+          }
+
+          &:hover {
+            background-color: $secondary-color;
+            a {
+              padding-left: 25px;
+            }
+          }
+        }
+
+        @include breakpoint-down(md) {
+          display: none;
+          position: relative;
+          padding: 6.4px 0;
+          padding-left: 40px;
+          width: 100%;
+          box-shadow: none;
+          transform: translateY(0);
+
+          li {
+            background-color: unset;
+
+            a {
+              border-bottom: unset;
+            }
+
+            &:hover {
+              background-color: unset;
+              a {
+                padding-left: 0;
+              }
+            }
+          }
+        }
+      }
+
+      &.active {
+        @include breakpoint-down(md) {
+          ul {
+            display: block;
+            visibility: visible;
+            opacity: 1;
+            z-index: 1;
+            transform: translateY(0);
+          }
+        }
+      }
+
+      &:hover {
+        ul {
+          visibility: visible;
+          opacity: 1;
+          z-index: 1;
+          transform: translateY(10%);
+          @include breakpoint-down(md) {
+            transform: translateY(0);
+          }
+          transition-delay: 0s, 0s, 0.3s;
+        }
+      }
+    }
+  }
+}
+
+.btn-purchase {
+  @include breakpoint-down(md) {
+    width: 100%;
+    text-align: center;
+  }
+}
