@@ -5,7 +5,7 @@ const MessengerPlugin = () => {
 
   useEffect(() => {
     if (!ref.current) return;
-    ref.current.setAttribute("page_id", "your_page_id");
+    ref.current.setAttribute("page_id", "105178919077646");
     ref.current.setAttribute("attribution", "biz_inbox");
 
     window.fbAsyncInit = function () {
